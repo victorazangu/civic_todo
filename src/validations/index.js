@@ -1,7 +1,3 @@
-const userValidationSchema = require("./users.validation");
-const todoValidationSchema = require("./todos.validation");
-
-module.exports = {
-  userValidationSchema,
-  todoValidationSchema,
-};
+module.exports.authValidations = require("./auth.validation");
+module.exports.usersValidations = require("./users.validation");
+module.exports.todosValidations = require("./todos.validation");

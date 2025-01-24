@@ -15,12 +15,17 @@ const Todo = sequelize.define(
       type: DataTypes.BOOLEAN,
       defaultValue: false,
     },
+    isDeleted: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+    },
     ownerId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'User', 
-        key: 'id', 
+        model: "Users",
+        key: "id",
+        onDelete: "CASCADE",
       },
     },
   },
